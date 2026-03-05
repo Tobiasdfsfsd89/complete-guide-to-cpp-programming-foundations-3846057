@@ -3,24 +3,43 @@
 // Using Variables, by Eduardo Corpeño 
 
 #include <iostream>
+// #include <string>
 
-int a, b = 5;
+// void displayScore(const std::string& playerName){
+//     std::cout << "Player: " << playerName << std::endl;
+// }
+
+// int main(){
+//     std::string name = "Nigeran Prince";
+//     displayScore(name);
+//     return 0;
+// }
+
+// class Player{
+// public: 
+//     void updateScore() const{
+//         ++score;
+//     }
+// private:
+//     mutable int score = 0;
+// };
+
+// inline int calculateDamage(int baseDamage, int modifier){
+//     return baseDamage + modifier;
+// }
+
+// int main(){
+//     int totalDamage = calculateDamage(50, 10);
+//     std::cout << "Total Damage: " << totalDamage << std::endl;
+//     return 0;
+// }
+
+constexpr int calculateExperience(int level){
+    return level * level * 100;
+}
 
 int main(){
-    bool my_flag;
-    a = 7;
-    my_flag = false;
-    std::cout << "a = " << a << std::endl;
-    std::cout << "b = " << b << std::endl;
-    std::cout << "flag = " << my_flag << std::endl;
-    my_flag = true;
-    std::cout << "flag = " << my_flag << std::endl;
-    std::cout << "a + b = " << a + b << std::endl;
-    std::cout << "b - a = " << b - a << std::endl;
-    unsigned int positive;
-    positive = b - a;
-    std::cout << "b - a (unsigned) = " << positive << std::endl;
-
-    std::cout << std::endl << std::endl;
+    constexpr int experience = calculateExperience(5);
+    std::cout << "Experience for level 5: " << experience << std::endl;
     return 0;
 }
